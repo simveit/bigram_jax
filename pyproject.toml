@@ -1,0 +1,13 @@
+[project]
+name = "bigram-jax"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jax[tpu]==0.4.33",
+    "libtpu-nightly",
+]
+
+[tool.uv.sources]
+libtpu-nightly = { url = "https://storage.googleapis.com/libtpu-nightly-releases/wheels/libtpu-nightly/libtpu_nightly-0.1.dev20240916+nightly-py3-none-any.whl" }
