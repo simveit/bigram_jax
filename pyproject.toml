@@ -12,3 +12,50 @@ dependencies = [
 
 [tool.uv.sources]
 libtpu-nightly = { url = "https://storage.googleapis.com/libtpu-nightly-releases/wheels/libtpu-nightly/libtpu_nightly-0.1.dev20240916+nightly-py3-none-any.whl" }
+
+[tool.uv]
+managed = true
+dev-dependencies = ["jupyter>=1.1.1", "mypy==1.11.2", "ruff>=0.6.6"]
+
+[tool.mypy]
+allow_redefinition = true
+allow_untyped_globals = false
+check_untyped_defs = true
+color_output = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = false
+disallow_untyped_decorators = false
+disallow_untyped_defs = true
+error_summary = true
+ignore_missing_imports = true
+implicit_reexport = false
+namespace_packages = true
+no_implicit_optional = true
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+show_traceback = true
+strict = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = false
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+unfixable = []
+select = [
+    "F", # pyflakes
+    "E", # pycodestyle
+    "W", # pycodestyle warnings
+    "I", # isort
+]
+ignore = [
+    "E501", # line too long
+]
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
+line-length = 99
