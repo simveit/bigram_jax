@@ -5,7 +5,6 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "ipykernel>=6.29.5",
     "jax[tpu]==0.4.33",
     "libtpu-nightly",
 ]
